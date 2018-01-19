@@ -8,7 +8,17 @@ router.get('/add', function(req, res, next) {
 
 
 router.post('/api/updata', function(req, res) {
-	
+	var goods_name = req.body.goods_name;
+	GoodsModel.update({goods_name_01:goods_name}, {flag:0}, function(err, docs) {
+//		console.log(err)
+		if(!err) {
+				var result = {
+					code: 100,
+					data:docs
+			}
+				res.json(result)
+		}
+	})
 })
 
 
@@ -34,7 +44,7 @@ router.post('/api/gain', function(req, res, next) {
 				pageNO: pageNO,
 				perPageCnt: perPageCnt
 			}
-			console.log(perPageCnt)
+//			console.log(perPageCnt)
 			res.json(result);
 		});
 	})

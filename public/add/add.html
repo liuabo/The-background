@@ -225,29 +225,56 @@
 <script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 <script type="text/javascript" src="js/add.js" ></script>
 <script type="text/javascript">
-	function add() {
-		$.ajax({
-			url:"/goods/api/goods_upload",
-			type:"post",
-			data:{
-				goods_name_01: $("#goods_name_01").val(),
-				goods_sn: $("#goods_sn").val(),
-				shop_price: $("#shop_price").val(),
-				Simulation: $("#Simulation").val(),
-				repertory: $("#repertory").val(),
-				so: $("#so").val(),
-				ser: $("#ser").val()
-			},
-			success: function(res) {
-				console.log(res);
-				if(res.code == 1) {
-					alert(res.message);
-//					location.href = "/";
-				} else {
-					alert(res.message);
-				}
-			}
-		});
+
+function getData() {
+
+	var str = window.location.search;
+
+	console.log(str);
+	console.log(1);
+	var str1 = str.replace("?", "");
+	//		    console.log(str1);
+	var arr1 = str1.split("&");
+	//		    console.log(arr1);
+	var arr2 = new Object();
+	for(i in arr1) {
+		var keyAndValue = arr1[i].split("=");
+		//		    	console.log(keyAndValue);
+		arr2[keyAndValue[0]] = keyAndValue[1];
 	}
+	//		    console.log(arr2.name);
+	$("#goods_name_01").val(decodeURIComponent(arr2.name));
+	$("#goods_sn").val(arr2.item);
+	$("#shop_price").val(decodeURIComponent(arr2.price));
+	$("#so").val(arr2.sort);
+	$("#repertory").val(arr2.stock);
+	$("#Simulation").val(arr2.sales);
+}
+getData()
+
+
+function add() {
+	$.ajax({
+		url: "/goods/api/goods_upload",
+		type: "post",
+		data: {
+			goods_name_01: $("#goods_name_01").val(),
+			goods_sn: $("#goods_sn").val(),
+			shop_price: $("#shop_price").val(),
+			Simulation: $("#Simulation").val(),
+			repertory: $("#repertory").val(),
+			so: $("#so").val(),
+			ser: $("#ser").val()
+		},
+		success: function(res) {
+			console.log(res);
+			if(res.code == 1) {
+				alert(res.message);
+			} else {
+				alert(res.message);
+			}
+		}
+	});
+}
 </script>
 </html>

@@ -238,7 +238,7 @@
 				$.each(arr, function(index, value) {
 //					console.log(value.goods_name_01)
 //页数
-					console.log(value)
+//					console.log(value)
 					
 					$(".ta").append(`<tr class="list_01" style="height:59px;">
 							<td class="th_01" style="background:#fff;">
@@ -246,14 +246,14 @@
 								<span>1</span>
 							</td>
 							<td class="first-cell th_02" style="color: red; background:#fff">
-							<span title="点击修改内容" style="">${value.goods_name_01}</span>
+							<span title="点击修改内容" id="goodN" style="">${value.goods_name_01}</span>
 							</td>
 							<td class="th_03" style="background:#fff" align="center">
-								<span>${value.goods_sn}</span>
+								<span id="goodI">${value.goods_sn}</span>
 								
 							</td>
 							<td  class="th_04" style="background:#fff" align="center">
-								<span title="点击修改内容" style="">${value.shop_price}
+								<span id="goodP" title="点击修改内容">${value.shop_price}
     </span>
 							</td>
 							<td style="background:#fff" align="center">
@@ -268,28 +268,27 @@
 								<img src="list/yes.gif">
 							</td>
 							<td style="background:#fff" align="center">
-								<span class="px">${value.repertory}</span>
+								<span id="goodST" class="px">${value.repertory}</span>
 							</td>
 							<td style="background:#fff" align="center">
-							<span>${value.repertory}</span>
+							<span id="goodSK">${value.repertory}</span>
 							</td>
 							<td style="background:#fff" align="center">
-								<span>${value.Simulation}</span>
+								<span id="goodSL">${value.Simulation}</span>
 							</td>
 							<td style="background:#fff" align="center">
-								<a href="../goods.php?id=134" target="_blank" title="查看">
+								<a href="javascript:;" target="_blank" title="查看">
 									<img src="list/icon_view.gif" width="21" height="21" border="0">
 								</a>
-								<a href="../add/add.html" target="content" title="编辑">
+								<a href="javascript:;" id="edit"  title="编辑">
 									<img src="list/icon_edit.gif" width="21" height="21" border="0">
 								</a>
-								<a href="goods.php?act=copy&amp;goods_id=134&amp;extension_code=" title="复制">
+								<a href="javascript:;" title="复制">
 									<img src="list/icon_copy.gif" width="21" height="21" border="0">
 								</a>
-								<a class="Del" href="javascript:;"  title="回收站">
-									<img class="Del" src="list/icon_trash.gif" width="21" height="21" border="0">
+								<a id="Del" href="javascript:;"  title="回收站">
+									<img src="list/icon_trash.gif" width="21" height="21" border="0">
 								</a>
-								<img src="list/empty.gif" width="21" height="21" border="0">
 							</td>
 						</tr>`)
 				})
@@ -298,21 +297,32 @@
 		});
 	}
 	
-	$(".Del").click(function() {
-		$(this).parent().parent().remove();
-	})
-	$(".redact").click(function() {
-		var goods_name = $(".Del").parent().parent().find(".th_02").children().html();
+	$(".ta").on("click","#Del",function() {
+		var goods_name = $("#Del").parent().parent().find(".th_02").children().html();
+		console.log(goods_name)
 		$.ajax({
 			url:"/goods/api/updata",
 			type:"post",
 			data: {
 				goods_name: goods_name
+			},
+			success: function(req,res) {
+				console.log(res);
+				if(res.code == 100) {
+					alert(res.data)
+				}
 			}
-//			success: function(req, res) {
-//				
-//			}
 		})
 	})
+	$(".ta").on("click", "#edit", function() {
+		var goodN = $("#goodN").html();
+		var goodI = $("#goodI").html();
+		var goodP = $("#goodP").html();
+		var goodST = $("#goodST").html();
+		var goodSK = $("#goodSK").html();
+		var goodSL = $("#goodSL").html();
+		location.href = '../add/add.html?name='+ goodN + "&item=" + goodI + "&price=" + goodP + "&sort=" + goodST + "&stock=" + goodSK + "&sales=" + goodSL;
+	})
+	
 </script>
 </html>

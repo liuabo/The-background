@@ -56,16 +56,16 @@ router.post('/goods/api/goods_upload', function(req, res, next) {
 				result.message = "失败";
 				res.send("失败");
 			}
-//			res.json(result);
+			res.json(result);
 		});
-		GoodsModel.find({goods_name_01: goods_name_01}, (err, docs)=>{
-		if(docs.length !== 0) {
-			result.code = -101;
-			result.message = "此商品已存在"
-		}
-		res.json(result);
-	})
-
+//		GoodsModel.find({goods_name_01: goods_name_01}, (err, docs)=>{
+//		if(docs.length !== 0) {
+//			result.code = -101;
+//			result.message = "此商品已存在"
+//		}
+//		res.json(result);
+//	})
+res.json(result);
 });
 
 
