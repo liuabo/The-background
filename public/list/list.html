@@ -238,17 +238,18 @@
 				$.each(arr, function(index, value) {
 //					console.log(value.goods_name_01)
 //页数
+					console.log(value)
 					
 					$(".ta").append(`<tr class="list_01" style="height:59px;">
 							<td class="th_01" style="background:#fff;">
 								<input name="checkboxes[]" value="134" type="checkbox">
-								<span>${value.ser}</span>
+								<span>1</span>
 							</td>
 							<td class="first-cell th_02" style="color: red; background:#fff">
 							<span title="点击修改内容" style="">${value.goods_name_01}</span>
 							</td>
 							<td class="th_03" style="background:#fff" align="center">
-								<span>${value.ser}</span>
+								<span>${value.goods_sn}</span>
 								
 							</td>
 							<td  class="th_04" style="background:#fff" align="center">
@@ -301,23 +302,16 @@
 		$(this).parent().parent().remove();
 	})
 	$(".redact").click(function() {
+		var goods_name = $(".Del").parent().parent().find(".th_02").children().html();
 		$.ajax({
-			url:"/goods/api/gain",
+			url:"/goods/api/updata",
 			type:"post",
-			success: function() {
-				var arr = res.data;
-//				console.log(res);
-//				console.log(arr);
-				$.each(arr, function(index, value) {
-					alert(value.goods_01)
-//					$("#goods_name_01").val();
-//					$("#goods_sn").val();
-//					$("#so").val();
-//					$("#Simulation").val();
-//					$("#repertory").val();
-//					$("#ser").val();
-				})
+			data: {
+				goods_name: goods_name
 			}
+//			success: function(req, res) {
+//				
+//			}
 		})
 	})
 </script>

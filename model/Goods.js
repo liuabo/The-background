@@ -8,6 +8,7 @@ var Goods = new Schema({
     repertory  	    : Number,
     so     	   	    : Number,
     ser				: Number,
+    flag            : Number,
     create_date: { type: Date, default: Date.now }
 });
 // 创建model对象
