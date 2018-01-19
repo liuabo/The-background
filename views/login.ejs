@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/regist.css"/>
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"/>
+	</head>
+	<body>
+			<form  class="clear">
+				<div class="login-hd">
+			   		 <img src="../login/shopex.png" alt="shopex" class="logo">
+			  	</div>
+				<div class="login">
+			  	<div class="bd-logo">
+		       		 <img src="../login/ecshop-logo.png" alt="ECSHOP" width="373" height="103" border="0">
+		      </div>
+					<div class="login-panel">
+						<div class="input">
+							<i style="position: relative;left:-34px;font-size: 25px;" class="iconfont icon-yonghutouxiang"></i>
+						<input type="text" name="username" id="username" value="" placeholder="用户名"/>
+						</div>
+						<div class="input">
+							<i style="position: relative;left:-34px;font-size: 25px;" class="iconfont icon-mima"></i>
+						<input type="password" name="psw" id="psw" value="" placeholder="密码" />
+						</div>
+						<div class="input">
+							<i style="position: relative;left:-34px;font-size: 25px;" class="iconfont icon-ecurityCode"></i>
+						<input type="text" name="yz" id="yz" value="" placeholder="验证码"/>
+						</div>
+						<div >
+						<!-- <input id="rtegist" type="button" value="登陆"/> -->
+						<button id="rtegist" onclick="login()">登录</button>
+						</div>
+					</div>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		function login() {
+			$.ajax({
+				url: "/api/login4ajax",
+				type: "post",
+				data: {
+					username: $("#username").val(),
+					psw: $("#psw").val()
+				},
+				success: function(res) {
+					console.log(res);
+					if(res.code == 1) {
+						alert(res.message);
+						location.href = "/dashboard?r=" + new Date().getTime();
+					} else {
+						alert(res.message);
+					}
+				}
+			})
+		}
+</script>
+</html>

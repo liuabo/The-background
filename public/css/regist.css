@@ -1,0 +1,115 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  background: url(../regist/ecshop-bg.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+form .login-hd {
+  background: none;
+  height: 44px;
+  padding: 40px 0 40px 50px;
+}
+form .bd-logo {
+  width: 380px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+form .bd-logo img {
+  width: 248px;
+  height: 65px;
+  margin-left: 66px;
+}
+form .login {
+  width: 475px;
+  height: 518px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 475px;
+  margin: auto auto;
+  background: url(../regist/icloud-bar.png) no-repeat center bottom;
+}
+form .login .login-panel {
+  position: absolute;
+  left: 16px;
+  z-index: 2;
+  width: 302px;
+  height: 321px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 0;
+  color: #A1A1A1;
+  padding: 5px 70px 25px;
+  overflow: hidden;
+  box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.3);
+  height: 322px;
+}
+form .login .login-panel #rtegist {
+  margin-top: 20px;
+  width: 302px;
+  height: 51px;
+  background: #fc7878;
+  color: #fff;
+}
+form .login .login-panel .input:first-child {
+  margin-top: 46px;
+}
+form .login .login-panel input {
+  border: none;
+  color: #8a8a8a;
+  font-size: 12px;
+}
+form .login .login-panel .input {
+  border: none;
+  background-color: #fff;
+  color: #8a8a8a;
+  width: 100%;
+  height: 50px;
+  line-height: 48px;
+  text-indent: 50px;
+  box-shadow: inset 30px 30px 0 30px #fff;
+  margin: 2px 0;
+  border-radius: 2px;
+}
+form .login .login-panel #yzm {
+  position: relative;
+  top: -3px;
+  color: #fff;
+  background: #8A8A8A;
+  padding: 10px;
+}
+form .login .login-panel .bside {
+  margin-top: 12px;
+  overflow: hidden;
+  height: auto;
+}
+form .login .login-panel .bside a {
+  float: right;
+  display: inline-block;
+  text-align: right;
+}
+form .login .login-panel .bside input[type="checkbox"] {
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 2px 8px 0 0;
+}
+form .login .login-panel .bside label {
+  color: #666;
+  float: left;
+}
+form .login .login-panel .bside .link-forget {
+  float: left;
+  margin-left: 25px;
+}
+

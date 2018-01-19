@@ -1,0 +1,118 @@
+@charset "utf-8";
+.top{
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-weight: normal;
+    padding: 7px 10px;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    .sp{
+        display: inline-block;
+        color: #4c4c4c;
+        font-size: 18px;
+        font-weight: normal;
+        vertical-align: middle;
+    }
+    img{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+    .sub{
+        width: 98px;
+        height:26px;
+        text-align: center;
+        line-height: 26px;
+        float: right;  
+        a {
+            float: right;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px 0 23px;
+            background: #c43926 url(../list/icon_add02.gif) no-repeat 6px center;
+                background-color: rgb(196, 57, 38);
+            border-radius: 3px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: normal;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
+.form_div{
+//  width:1310px;
+//  height:42px;
+    background: #f3f3f3 url("../list/th_bg.gif") repeat-x;
+    border: 1px solid #ddd;
+    padding: 5px;
+    color: #808080;
+    margin: 0 0 10px 0;
+    img{
+        display: inline-block;
+    }
+    .sele_01{
+        width:160px;
+        height: 20px;
+    }
+    .sele_02{
+        width:107px;
+        height: 20px;
+    }
+    .sele_03{
+        width:75px;
+        height: 20px;
+    }
+    .list_Div{
+         th {
+            width:57px;
+            height:45px;
+            line-height: 39px;
+            background: #f3f3f3 url("../list/th_bg.gif") repeat-x;
+            white-space: nowrap;
+        }
+        .th_01{
+            width:104px;
+            height:45px;
+        }
+        .th_02{
+            width:251px;
+            height:45px;
+        }
+        .th_03{
+            width:140px;
+            height:45px;
+        }
+        .th_03{
+            width:90px;
+            height:45px;
+        }
+        .th_04{
+            width:90px;
+            height:45px;
+        }
+        .th_05{
+            width:232px;
+            height:45px;
+        }   
+        .list_01{
+            td{
+                padding: 10px;
+            }
+            td span:hover{
+                background: rgb(39, 130, 150);
+            }
+        }
+    }
+    #page-table{
+        width:100%;
+    }
+    #footer {
+        background: #f3f3f3 url("../images/th_bg.gif") repeat-x;
+        border: 1px solid #ddd;
+        padding: 15px;
+        color: #9CACAF;
+        margin: 10px 0;
+        text-align: center;
+    }
+}

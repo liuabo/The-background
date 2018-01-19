@@ -1,0 +1,214 @@
+@charset "UTF-8";
+.Pic_01{
+	background: #454545 url(../index/menu1_1.png) no-repeat center top!important;
+}
+.Pic_02{
+	background: url(../index/menu1_1.png) no-repeat center top!important;
+}
+.head {
+  width: 100%;
+  height: 76px;
+  background: #303030;
+}
+.head .head_l {
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 262px;
+  height: 45px;
+  float: left;
+}
+.head .head_r {
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  height: 75px;
+}
+.head .head_r ul li {
+  float: left;
+}
+.head .head_r ul li a {
+  text-align: center;
+  display: block;
+  width: 102px;
+  height: 75px;
+  padding-top: 8px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.head .head_r ul li a img {
+  display: inline-block;
+}
+.head .head_r ul li a span {
+  display: block;
+  margin-top: 2px;
+}
+
+.menu {
+  background: #575757;
+  height: 41px;
+  border-bottom: 1px solid #212121;
+}
+.menu ul {
+  margin: 0px 0px 0px 15px;
+  padding: 0;
+  list-style-type: none;
+}
+.menu ul li {
+  float: left;
+  display: block;
+  height: 41px;
+  line-height: 41px;
+  position: relative;
+}
+.menu ul li a {
+  float: left;
+  color: #FFF;
+  padding: 0px 12px;
+  display: block;
+  text-decoration: none;
+}
+.menu ul li a img {
+  float: left;
+  margin-top: 10px;
+}
+.menu ul li a span {
+  margin-left: 10px;
+  float: left;
+}
+.menu ul li a .num {
+  width: 32px;
+  height: 16px;
+  background: url(../index/index-11_22.png) no-repeat scroll;
+  display: inline-block;
+  line-height: 16px;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 10px;
+}
+.menu ul li .muneFG {
+  height: 13px;
+  width: 0px;
+  border-right: 1px solid #656565;
+  margin-top: 15px;
+  *margin-top: -18px;
+  _margin-top: 0px;
+  border-left: 1px solid #303030;
+  display: inline-block;
+}
+
+#roll {
+  width: 100%;
+  height: auto;
+  /*background: red;*/
+  top: 117px;
+  position: absolute;
+  bottom: 0;
+}
+#roll .roll_l {
+  width: 180px;
+  height: 100%;
+  background: #575757;
+  float: left;
+  overflow-y: auto;
+}
+#roll .roll_l .tabbar p {
+  width: 153px;
+  height: 33px;
+  padding-left: 10px;
+  line-height: 33px;
+  background: #303030;
+}
+#roll .roll_l .tabbar p #tab-front {
+  line-height: 33px;
+  font-weight: bold;
+  padding: 4px 15px 4px 18px;
+  cursor: hand;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #fff;
+}
+#roll .roll_l .tabbar ul li {
+  border-top: #7f7f7f 1px solid;
+  width: 100%;
+  color: #FFF;
+  line-height: 42px;
+  text-align: left;
+  text-indent: 40px;
+  background: #575757;
+  cursor:pointer;
+}
+#roll .roll_l .tabbar ul li .secondary {
+  display: none;
+}
+#roll .roll_l .tabbar ul li .secondary li {
+  background: #575757;
+  background-image: none;
+  text-indent: 40px;
+}
+#roll .roll_l .tabbar ul li .secondary li a {
+	color: #fff;
+    display: block;
+    width:100%;
+}
+#roll .roll_l .tabbar ul .list_01 {
+  background: url(../index/menu_1.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_02 {
+  background: url(../index/menu_2.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_03 {
+  background: url(../index/menu_3.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_04 {
+  background: url(../index/menu_4.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_05 {
+  background: url(../index/menu_5.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_06 {
+  background: url(../index/menu_6.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_07 {
+  background: url(../index/menu_7.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_08 {
+  background: url(../index/menu_8.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_09 {
+  background: url(../index/menu_9.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_10 {
+  background: url(../index/menu_10.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_11 {
+  background: url(../index/menu_11.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_12 {
+  background: url(../index/menu_12.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_13 {
+  background: url(../index/menu_13.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_14 {
+  background: url(../index/menu_14.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_15 {
+  background: url(../index/menu_15.png) no-repeat center;
+}
+#roll .roll_l .tabbar ul .list_16 {
+  background: url(../index/menu_16.png) no-repeat center;
+}
+#roll .roll_r {
+  width: auto;
+  height: 100%;
+  background: #212121;
+  position: relative;
+  overflow-y: auto;
+}
+#roll .roll_r iframe {
+  width: 100%;
+  height: 100%;
+  background: url(../index/body_bj.jpg);
+}
+
