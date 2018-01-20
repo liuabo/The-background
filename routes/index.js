@@ -65,7 +65,7 @@ router.post('/goods/api/goods_upload', function(req, res, next) {
 //		}
 //		res.json(result);
 //	})
-res.json(result);
+//res.json(result);
 });
 
 
